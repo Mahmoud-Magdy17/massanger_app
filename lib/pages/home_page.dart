@@ -15,80 +15,82 @@ class MassengerApp extends StatelessWidget {
       body:
       Padding(
         padding: const EdgeInsets.all(12.0),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 12.0),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    CustomStatus(
-                        img: Icon(
-                          Icons.add,
-                        ),
-                        name: "Add Story"),
-                    CustomStatus(
-                        img: CustomCircularalImage(
-                          img: "assets/images/img1.jpg",
-                        ),
-                        name: "Mahmoud"),
-                    CustomStatus(
-                        img: CustomCircularalImage(
-                          img: "assets/images/img1.jpg",
-                        ),
-                        name: "Mahmoud"),
-                    CustomStatus(
-                        img: CustomCircularalImage(
-                          img: "assets/images/img1.jpg",
-                        ),
-                        name: "Mahmoud"),
-                    CustomStatus(
-                        img: CustomCircularalImage(
-                          img: "assets/images/img1.jpg",
-                        ),
-                        name: "Mahmoud"),
-                    CustomStatus(
-                        img: CustomCircularalImage(
-                          img: "assets/images/img1.jpg",
-                        ),
-                        name: "Mahmoud"),
-                    CustomStatus(
-                        img: CustomCircularalImage(
-                          img: "assets/images/img1.jpg",
-                        ),
-                        name: "Mahmoud"),
-                  ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 12.0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      CustomStatus(
+                          img: Icon(
+                            Icons.add,
+                          ),
+                          name: "Add Story"),
+                      CustomStatus(
+                          img: CustomCircularalImage(
+                            img: "assets/images/img1.jpg",
+                          ),
+                          name: "Mahmoud"),
+                      CustomStatus(
+                          img: CustomCircularalImage(
+                            img: "assets/images/img1.jpg",
+                          ),
+                          name: "Mahmoud"),
+                      CustomStatus(
+                          img: CustomCircularalImage(
+                            img: "assets/images/img1.jpg",
+                          ),
+                          name: "Mahmoud"),
+                      CustomStatus(
+                          img: CustomCircularalImage(
+                            img: "assets/images/img1.jpg",
+                          ),
+                          name: "Mahmoud"),
+                      CustomStatus(
+                          img: CustomCircularalImage(
+                            img: "assets/images/img1.jpg",
+                          ),
+                          name: "Mahmoud"),
+                      CustomStatus(
+                          img: CustomCircularalImage(
+                            img: "assets/images/img1.jpg",
+                          ),
+                          name: "Mahmoud"),
+                    ],
+                  ),
                 ),
-              ),
-            ), //Status
-            Expanded(
-              child: ListView.separated(
-                  physics: NeverScrollableScrollPhysics(),
-                  primary: false,
-                  itemBuilder: (context, index) {
+              ), //Status
+              Expanded(
+                child: ListView.separated(
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) {
 
-                    return
-                      // ListTile(
-                        // leading: user_photos[index],
-                        // title: user_names[index],
-                        // subtitle: Text("text text text text text text text text"),
-                      // );
-                      CustomChat(
-                        img: user_photos[index],
-                        name: user_names[index],
-                        chat: "text text text text text text text text"
-                    );
-                  },
-                  separatorBuilder: (context, index) =>
-                      SizedBox(
-                        height: 15,
-                      ),
-                  itemCount:16),
-            ), // Chats
+                      return
+                        // ListTile(
+                          // leading: user_photos[index],
+                          // title: user_names[index],
+                          // subtitle: Text("text text text text text text text text"),
+                        // );
+                        CustomChat(
+                          img: user_photos[index],
+                          name: user_names[index],
+                          chat: "text text text text text text text text"
+                      );
+                    },
+                    separatorBuilder: (context, index) =>
+                        SizedBox(
+                          height: 15,
+                        ),
+                    itemCount:16),
+              ), // Chats
 
 
-          ],
+            ],
+          ),
         ),
       ),
     );
