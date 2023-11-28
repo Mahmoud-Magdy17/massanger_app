@@ -63,30 +63,28 @@ class MassengerApp extends StatelessWidget {
                   ),
                 ),
               ), //Status
-              Expanded(
-                child: ListView.separated(
-                    physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemBuilder: (context, index) {
+              ListView.separated(
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
 
-                      return
-                        // ListTile(
-                          // leading: user_photos[index],
-                          // title: user_names[index],
-                          // subtitle: Text("text text text text text text text text"),
-                        // );
-                        CustomChat(
-                          img: user_photos[index],
-                          name: user_names[index],
-                          chat: "text text text text text text text text"
-                      );
-                    },
-                    separatorBuilder: (context, index) =>
-                        SizedBox(
-                          height: 15,
-                        ),
-                    itemCount:16),
-              ), // Chats
+                    return
+                      // ListTile(
+                        // leading: user_photos[index],
+                        // title: user_names[index],
+                        // subtitle: Text("text text text text text text text text"),
+                      // );
+                      CustomChat(
+                        img: user_photos[index],
+                        name: user_names[index],
+                        chat: "text text text text text text text text"
+                    );
+                  },
+                  separatorBuilder: (context, index) =>
+                      SizedBox(
+                        height: 15,
+                      ),
+                  itemCount:16), // Chats
 
 
             ],
