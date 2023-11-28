@@ -26,6 +26,7 @@ class CustomChat extends StatelessWidget {
             child: img
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(name,style: TextStyle(
